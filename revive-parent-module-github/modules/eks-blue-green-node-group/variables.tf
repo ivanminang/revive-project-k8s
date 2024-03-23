@@ -7,19 +7,19 @@ variable "tags" {
   type        = map(string)
   description = "Common tags to be applied to resources"
   default = {
-    "id"             = "2560"
-    "owner"          = "DevOps Easy Learning"
-    "teams"          = "DEL"
-    "environment"    = "dev"
-    "project"        = "del"
-    "create_by"      = "Terraform"
+    "id"             = "2024"
+    "owner"          = "Devops Easy Learning"
+    "teams"          = "Phase-10-1"
+    "environment"    = "Prod"
+    "project"        = "revive"
+    "create_by"      = "EK-TECH Solutions"
     "cloud_provider" = "aws"
   }
 }
 
 variable "eks_version" {
   type    = string
-  default = "1.22"
+  default = "1.24"
 }
 
 variable "node_min" {
@@ -29,7 +29,7 @@ variable "node_min" {
 
 variable "desired_node" {
   type    = string
-  default = "1"
+  default = "4"
 }
 
 variable "node_max" {
@@ -42,10 +42,25 @@ variable "blue_node_color" {
   default = "blue"
 }
 
+variable "green_node_color" {
+  type    = string
+  default = "green"
+}
+
+variable "blue" {
+  type    = bool
+  default = false
+}
+
+variable "green" {
+  type    = bool
+  default = false
+}
+
 variable "ec2_ssh_key" {
   type        = string
   description = "SSH key to connect to the node from bastion host"
-  default     = "terraform"
+  default     = "node_group_key"
 }
 
 variable "deployment_nodegroup" {
@@ -68,7 +83,7 @@ variable "ami_type" {
 variable "instance_types" {
   type        = string
   description = "t3.medium should be used at least"
-  default     = "t2.micro"
+  default     = "t3.medium"
 }
 
 variable "disk_size" {
@@ -91,11 +106,16 @@ variable "enable_cluster_autoscaler" {
 
 variable "control_plane_name" {
   type    = string
-  default = "2560-dev-del"
+  default = "2024-prod-revive"
+}
+
+variable "cluster_name" {
+  type    = string
+  default = "2024-prod-revive"
 }
 
 variable "private_subnets" {
-  type = map(string)
+  # type = map(string)
   default = {
     us-east-1a = "subnet-096d45c28d9fb4c14"
     us-east-1b = "subnet-05f285a35173783b0"

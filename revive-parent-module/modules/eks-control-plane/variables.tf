@@ -35,9 +35,9 @@ variable "endpoint_public_access" {
 variable "public_subnets" {
   # type = map(any)
   default = {
-    us-east-1a = "subnet-096d45c28d9fb4c14"
-    us-east-1b = "subnet-05f285a35173783b0"
-    us-east-1c = "subnet-0fe3255479ad7c3a4"
+    us-east-1a = ""
+    us-east-1b = ""
+    us-east-1c = ""
   }
 }
 

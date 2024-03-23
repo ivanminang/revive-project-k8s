@@ -1,7 +1,7 @@
 region                      = "us-east-1"
 aws-load-balancer-controller-sa = "aws-load-balancer-controller-sa"
 aws-load-balancer-controller-ns = "kube-system"
-control_plane_name         = "2024-prod-revive"
+# control_plane_name         = "2024-prod-revive"
 vpc_id                          = ""
 tags = {
   "id"             = "2024"

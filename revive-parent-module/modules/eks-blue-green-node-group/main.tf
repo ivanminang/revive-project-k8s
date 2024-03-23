@@ -13,9 +13,9 @@ resource "aws_eks_node_group" "green-nodes" {
   instance_types = [var.instance_types]
   disk_size      = var.disk_size
 
-  remote_access {
-    ec2_ssh_key = var.ec2_ssh_key
-  }
+  # remote_access {
+  #   ec2_ssh_key = var.ec2_ssh_key
+  # }
 
   scaling_config {
     desired_size = var.green_node_color == "green" && var.green ? var.desired_node : 0

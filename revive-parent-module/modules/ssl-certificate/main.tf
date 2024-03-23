@@ -1,14 +1,16 @@
 resource "aws_acm_certificate" "revive" {
   # provider = aws.acm
   domain_name       = "camerspeed.com"
+  # domain_name       = "reviceapp.com"
   subject_alternative_names = ["*.camerspeed.com"]
+  # subject_alternative_names = ["*.reviceapp.com"]
   validation_method = "DNS"
 
   tags = {
   "id"               = "2024"
     "owner"          = "Devops Easy Learning"
     "teams"          = "Phase-10-1"
-    "environment"    = "Prod"
+    # "environment"    = "Prod"
     "project"        = "revive"
     "create_by"      = "EK-TECH Solutions"
     "cloud_provider" = "aws"
@@ -23,7 +25,7 @@ resource "aws_acm_certificate" "revive" {
 # data source to retrieve the name of the hosted zone to contain the record
 data "aws_route53_zone" "hostedzone" {
 
-  # name         = "revive.com"
+  # name         = "reviceapp.com"
   name         = "camerspeed.com"
   private_zone = false
 }

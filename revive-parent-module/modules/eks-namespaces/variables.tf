@@ -5,12 +5,12 @@ variable "name_spaces" {
 variable "tags" {
   type = map(any)
   default = {
-    "id"             = "2560"
-    "owner"          = "DevOps Easy Learning"
-    "teams"          = "DEL"
+    "id"             = "2024"
+    "owner"          = "Devops Easy Learning"
+    "teams"          = "Phase-10-1"
     "environment"    = "dev"
-    "project"        = "del"
-    "create_by"      = "Terraform"
+    "project"        = "revive"
+    "create_by"      = "EK-TECH Solutions"
     "cloud_provider" = "aws"
   }
 }

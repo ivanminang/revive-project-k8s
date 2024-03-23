@@ -111,7 +111,8 @@ variable "control_plane_name" {
 
 variable "cluster_name" {
   type    = string
-  default = "2024-prod-revive"
+  default = ""
+  # default = "2024-prod-revive"
 }
 
 variable "private_subnets" {
